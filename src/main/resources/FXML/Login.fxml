@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: powderblue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.Controllers.LoginController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="175.0" style="-fx-background-color: deepskyblue;">
+         <children>
+            <AnchorPane />
+            <AnchorPane>
+               <children>
+                  <ImageView fitHeight="149.0" fitWidth="117.0" layoutX="29.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="67.0" prefWidth="178.0" text="MultiChat">
+               <font>
+                  <Font name="Dubai Bold" size="38.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="1.0" blue="0.3642131984233856" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="244.0" layoutY="151.0" text="Email">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="208.0" text="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="346.0" layoutY="150.0" prefHeight="26.0" prefWidth="182.0" promptText="Enter your email here" />
+      <PasswordField fx:id="passwordField" layoutX="346.0" layoutY="211.0" prefHeight="26.0" prefWidth="182.0" promptText="Enter your password here" />
+      <Label layoutX="252.0" layoutY="51.0" text="Authorization">
+         <font>
+            <Font name="Showcard Gothic" size="33.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7432098984718323" green="0.03703703731298447" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="242.0" layoutY="298.0" mnemonicParsing="false" onAction="#signIn" prefHeight="26.0" prefWidth="127.0" text="Sign in" />
+      <Button layoutX="399.0" layoutY="299.0" mnemonicParsing="false" onAction="#signUp" prefHeight="26.0" prefWidth="127.0" text="Sign up" />
+   </children>
+</AnchorPane>

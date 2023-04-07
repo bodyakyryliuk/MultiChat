@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="489.0" prefWidth="769.0" style="-fx-background-color: lightblack;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.Controllers.MainWindowController">
+   <children>
+      <HBox layoutX="195.0" prefHeight="43.0" prefWidth="583.0" style="-fx-background-color: dimgrey;">
+         <children>
+            <Label fx:id="companion" alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="586.0" text="Username">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Line endX="-98.79997253417969" endY="430.20001220703125" layoutX="294.0" layoutY="65.0" startX="-98.99998474121094" startY="-65.0" stroke="#00000084" />
+      <VBox fx:id="vbox" layoutX="-2.0" prefHeight="497.0" prefWidth="195.0" style="-fx-background-color: gray;">
+         <children>
+            <Label fx:id="usernameLabel" text="Chats" translateX="60.0" translateY="5.0">
+               <font>
+                  <Font name="Britannic Bold" size="28.0" />
+               </font>
+            </Label>
+            <ToggleButton fx:id="searchButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" styleClass="dark-gray-background" stylesheets="@../CSS/mainWindowStyle.css" text="Search chat" textFill="#b9afaf" translateX="4.0" translateY="26.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="addButton" mnemonicParsing="false" prefHeight="23.0" prefWidth="91.0" styleClass="dark-gray-background" stylesheets="@../CSS/mainWindowStyle.css" text="Add user" textFill="#b9afaf" translateX="102.0" translateY="3.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </ToggleButton>
+            <TextField fx:id="searchField" alignment="CENTER" maxWidth="-Infinity" prefHeight="24.0" prefWidth="189.0" promptText="Search or start a conversation" stylesheets="@../CSS/mainWindowStyle.css" translateX="4.0" translateY="9.0">
+               <styleClass>
+                  <String fx:value="dark-gray-background" />
+                  <String fx:value="text-field" />
+               </styleClass>
+            </TextField>
+            <ListView fx:id="userList" prefHeight="410.0" prefWidth="195.0" style="-fx-background-color: lightgrey;" translateY="13.0" />
+            <Button fx:id="deleteChatBtn" mnemonicParsing="false" onAction="#deleteChat" prefHeight="49.0" prefWidth="195.0" styleClass="dark-gray-background" stylesheets="@../CSS/mainWindowStyle.css" text="Delete chat" textFill="#b9afaf" translateX="1.0" translateY="-2.0" />
+         </children>
+      </VBox>
+      <ListView fx:id="chatList" layoutX="193.0" layoutY="43.0" prefHeight="428.0" prefWidth="584.0" />
+      <TextField fx:id="inputField" layoutX="193.0" layoutY="471.0" prefHeight="26.0" prefWidth="583.0" />
+   </children>
+</AnchorPane>

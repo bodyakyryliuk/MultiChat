@@ -1,0 +1,26 @@
+
+.incoming-bubble{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100px;
+}
+
+.outgoing-bubble{
+    -fx-background-color: #50C984;
+    -fx-background-radius: 100px;
+}
+
+.dark-gray-background{
+    -fx-background-color: #46474A;
+}
+
+.button:pressed {
+  -fx-background-color: #2b2727;
+}
+
+.radius{
+    -fx-background-radius : 100px;
+}
+
+.text-field{
+    -fx-text-fill: white;
+}
