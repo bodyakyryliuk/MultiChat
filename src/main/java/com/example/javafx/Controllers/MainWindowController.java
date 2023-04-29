@@ -236,16 +236,6 @@ public class MainWindowController implements Initializable {
         addedUsers.remove(userList.getSelectionModel().getSelectedItem());
     }
 
-//
-//    @FXML
-//    private void receiveData(ActionEvent event){
-//        Node node = (Node) event.getSource();
-//        Stage stage = (Stage) node.getScene().getWindow();
-//        UserModel user = (UserModel) stage.getUserData();
-//        System.out.println(user.getUsername());
-//    }
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User user = new User();
@@ -264,34 +254,3 @@ public class MainWindowController implements Initializable {
 
 
 
-
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        User user = new User();
-//        user.addUsersToList(allUsers);
-//        setAddSearchButtons();
-//
-//        inputField.setOnKeyPressed(keyEvent -> {
-//            if(keyEvent.getCode() == KeyCode.ENTER)
-//                sendMsg();
-//        });
-//
-//        new Thread(){
-//            @Override
-//            public void run(){
-//                try {
-//                    socket = new Socket("localhost", 8080);
-//                    din = new DataInputStream(socket.getInputStream());
-//                    dout = new DataOutputStream(socket.getOutputStream());
-//
-//                    String message;
-//                    while (true) {
-//                        message = din.readUTF();
-//                        displayInput(message, true);
-//                    }
-//                }catch (Exception e){
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
-//    }
