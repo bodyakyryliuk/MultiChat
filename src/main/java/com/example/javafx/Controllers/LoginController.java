@@ -43,7 +43,7 @@ public class LoginController implements Serializable {
 
     @FXML
     public void signIn(ActionEvent event){
-      //  if(user.checkPassword(emailField.getText(), passwordField.getText())){
+      if(user.checkPassword(emailField.getText(), passwordField.getText())){
         user = new UserModel(emailField.getText(), passwordField.getText());
         Node node = (Node) event.getSource();
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -63,7 +63,7 @@ public class LoginController implements Serializable {
             }catch (IOException e){
                 e.printStackTrace();
             }
-      //  }
+      }
     }
 
     public String getUsername(){
